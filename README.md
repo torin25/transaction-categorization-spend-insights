@@ -149,12 +149,19 @@ python run_check.py path/to/your.csv
 ## 📦 Requirements
 
 The pinned dependencies are listed in `requirements.txt`.
+
 streamlit==1.37.1
+
 pandas==2.2.2
+
 numpy==1.26.4
+
 scikit-learn==1.6.1
+
 joblib==1.4.2
+
 python-dateutil==2.9.0.post0
+
 pytz==2024.1
 
 ---
