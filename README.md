@@ -26,20 +26,21 @@ Upload a CSV and get:
 
 <details>
 <summary>Click to expand</summary>
-📁 data
+
+data/
 ┣ for_testing.csv
 ┗ README.md
 
-📁 models
+models/
 ┣ pipeline_v2_300k.joblib
 ┣ pipeline.joblib
 ┗ README.md
 
-📁 notebooks
+notebooks/
 ┣ transaction_categorization.ipynb
 ┗ README.md
 
-📁 outputs
+outputs/
 ┣ confusion_matrix_v2_300k.png
 ┣ confusion_matrix.png
 ┣ metrics_v2_300k.json
