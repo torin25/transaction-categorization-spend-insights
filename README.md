@@ -26,36 +26,37 @@ Upload a CSV and get:
 
 <details>
 <summary>Click to expand</summary>
-```bash
-data/
-┣ for_testing.csv
-┗ README.md
 
-models/
-┣ pipeline_v2_300k.joblib
-┣ pipeline.joblib
-┗ README.md
-
-notebooks/
-┣ transaction_categorization.ipynb
-┗ README.md
-
-outputs/
-┣ confusion_matrix_v2_300k.png
-┣ confusion_matrix.png
-┣ metrics_v2_300k.json
-┣ metrics.json
-┣ predictions_sample.csv
-┣ predictions(for_testing).csv
-┗ README.md
-
-app.py
-credit_card_transactions.csv.zip
-README.md
-requirements.txt
-run_check.py
-
-</details>```
+<pre> ```.
+├── data/
+│ ├── for_testing.csv
+│ └── README.md
+│
+├── models/
+│ ├── pipeline_v2_300k.joblib
+│ ├── pipeline.joblib
+│ └── README.md
+│
+├── notebooks/
+│ ├── transaction_categorization.ipynb
+│ └── README.md
+│
+├── outputs/
+│ ├── confusion_matrix_v2_300k.png
+│ ├── confusion_matrix.png
+│ ├── metrics_v2_300k.json
+│ ├── metrics.json
+│ ├── predictions_sample.csv
+│ ├── predictions(for_testing).csv
+│ └── README.md
+│
+├── app.py
+├── credit_card_transactions.csv.zip
+├── requirements.txt
+├── run_check.py
+└── README.md
+``` </pre>
+</details>
 
 ---
 
