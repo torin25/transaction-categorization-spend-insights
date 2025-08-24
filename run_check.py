@@ -8,7 +8,7 @@ import joblib
 # -------- CONFIG: update the CSV path if needed --------
 MODEL_PATH = "models/pipeline_v2_300k.joblib"
 # If your CSV has raw headers like: trans_date_trans_time, merchant, category, amt, city, state
-INPUT_CSV = "data/test1.csv"   # <-- set to your actual CSV path
+INPUT_CSV = "data/for_testing.csv"   # <-- set to your actual CSV path
 HAS_RAW_SCHEMA = True  # True for raw headers; False if already aligned (timestamp, merchant, amount, city, state)
 
 def align_schema(df: pd.DataFrame, has_raw: bool) -> pd.DataFrame:
