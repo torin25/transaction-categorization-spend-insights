@@ -26,7 +26,7 @@ Upload a CSV and get:
 
 <details>
 <summary>Click to expand</summary>
-
+```bash
 data/
 ┣ for_testing.csv
 ┗ README.md
@@ -55,7 +55,7 @@ README.md
 requirements.txt
 run_check.py
 
-</details>
+</details>```
 
 ---
 
@@ -182,9 +182,13 @@ pytz==2024.1
 This project uses the **Credit Card Transactions Dataset** from Kaggle:  
 🔗 [Credit Card Transactions Dataset — Priyam Choksi](https://www.kaggle.com/datasets/priyamchoksi/credit-card-transactions-dataset)
 
+---
+
 ## 📜 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+
+---
 
 ## 📊 Dataset License
 
