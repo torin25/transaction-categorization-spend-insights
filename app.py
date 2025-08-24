@@ -386,7 +386,6 @@ else:
 
 
 # ---------------- Budget Check (explicit month + selectable categories) ----------------
-# 
 
 st.markdown("### Budget Check")
 if not facts.empty:
@@ -467,18 +466,37 @@ if not facts.empty:
                     "actual": bdf["actual"].sum(),
                     "variance": bdf["variance"].sum(),
                 }
+
                 st.caption("Variance = budget − actual (positive means under budget)")
-                try:
-                    st.dataframe(
-                        bdf.style.background_gradient(
-                            subset=["variance"], cmap="RdYlGn"  # green for positive, red for negative
-                        ),
-                        use_container_width=True
+
+                # OPTION 1: Solid color (green for >=0, red for <0) – most legible
+                def variance_style(v):
+                    if pd.isna(v):
+                        return ""
+                    return (
+                        "background-color: #e8f5e9; color: #1b5e20;"  # green
+                        if v >= 0
+                        else "background-color: #ffebee; color: #b71c1c;"  # red
                     )
-                except Exception:
-                    st.dataframe(bdf, use_container_width=True)
+
+                # styled = (
+                #     bdf.style
+                #     .map(variance_style, subset=["variance"])
+                #     .format({"budget": "₹{:,.0f}", "actual": "₹{:,.0f}", "variance": "₹{:,.0f}"})
+                # )
+
+                # If you prefer your gradient instead of solid colors, replace `styled = ...` above with:
+                styled = (
+                    bdf.style
+                    .background_gradient(subset=["variance"], cmap="RdYlGn")  # green positive, red negative
+                    .format({"budget": "₹{:,.0f}", "actual": "₹{:,.0f}", "variance": "₹{:,.0f}"})
+                )
+
+                # IMPORTANT: Use st.table to preserve Styler colors on deployment
+                st.table(styled)
 else:
     st.info("No data to compute budgets.")
+
 
 
 
